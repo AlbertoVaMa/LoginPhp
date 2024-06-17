@@ -1,0 +1,493 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit; 
+} /* 1px = 10rem */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+}
+
+table, th, td {
+    border: 1px solid #000;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+/*-- contenedor del Login--*/
+  
+  input {
+      outline: none !important;
+      border: none;
+      background: transparent;
+  }
+  
+  button {
+      outline: none !important;
+      border: none;
+      background: transparent;
+  }
+  
+  button:hover {
+      cursor: pointer;
+  }
+
+/*--Decision--*/
+.container{
+    margin: 0 auto;
+}
+
+.wrap{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.wrap-decision a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+.alumno a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+  /*--Tabla--*/
+.table  tr {
+    color: #1D1D1D;
+}
+
+.table th{
+    background-color: #333333;
+    color: #FFF;
+}
+
+  
+  /*-- contenedor del Login--*/
+  
+  .container-login {
+    width: 100%;  
+    min-height: 100vh;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    /* background: -webkit-linear-gradient(to right, #00dbde, #fc00ff);
+    background: linear-gradient(to right, #00dbde, #fc00ff); */
+  }
+  
+  .wrap-login {
+    width: 400px;
+    background: #1D1D1D;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 77px 55px 53px 55px;
+    -webkit-box-shadow: 25px 40px 28px 0px rgba(0, 0, 0, 0.38);
+   /* box-shadow: eje-x | eje-y | blur-radius | color */
+  }
+  
+  
+  /*----Formulario de user y password----*/
+  
+  .login-form {
+    width: 100%;
+  }
+  
+  .login-form-title {
+    display: block;
+    font-family: Poppins-Bold;
+    font-size: 40px;
+    color: #fff;
+    line-height: 1.5;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+  
+  
+  /*------------------------------------------------------------------
+  [ Input ]*/
+  
+  .wrap-input100 {
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin-bottom: 37px;
+  }
+  
+  .input100 {
+    font-family: Poppins-Regular;
+    font-size: 15px;
+    color: #FFF;
+    line-height: 1.2;
+  
+    display: block;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    padding: 0 5px;
+  }
+  
+  /*---------------------------------------------*/ 
+  .focus-efecto {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  
+  .focus-efecto::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 4px; /*ancho de la linea que hace el efecto de barra de progeso en el input al hacer foco*/
+  
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  
+    background: #6a7dfe;
+    background: -webkit-linear-gradient(left, #21d4fd, #b721ff);
+    background: -o-linear-gradient(left, #21d4fd, #b721ff);
+    background: -moz-linear-gradient(left, #21d4fd, #b721ff);
+    background: linear-gradient(left, #21d4fd, #b721ff);
+  }
+  
+  .focus-efecto::after {
+    font-family: Poppins-Regular;
+    font-size: 15px;
+    color: #999999;
+    line-height: 1.2;
+  
+    content: attr(data-placeholder);
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 16px;
+    left: 0px;
+    padding-left: 5px;
+  
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  
+  .input100:focus + .focus-efecto::after {
+    top: -15px;
+  }
+  
+  .input100:focus + .focus-efecto::before {
+    width: 100%;
+  }
+  
+  .has-val.input100 + .focus-efecto::after {
+    top: -15px;
+  }
+  
+  .has-val.input100 + .focus-efecto::before {
+    width: 100%;
+  }
+  
+  /*---------------------------------------------*/
+  
+  
+  /*------------------------------------------------------------------
+  [ Button ]*/
+  .container-login-form-btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 13px;
+  }
+  
+  .wrap-login-form-btn {
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 1;
+    border-radius: 40px 5px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  
+  .login-form-bgbtn {
+    position: absolute;
+    z-index: -1;
+    width: 300%;
+    height: 100%;
+    background: #a64bf4;
+    background: -webkit-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+    background: -o-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+    background: -moz-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+    background: linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+    top: 0;
+    left: -100%;
+  
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  
+  .login-form-btn {
+    font-family: Poppins-Medium;
+    font-size: 20px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+  
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    height: 50px;
+  }
+  
+  .wrap-login-form-btn:hover .login-form-bgbtn {
+    left: 0;
+  }
+  
+  
+  /*--- Para dispositivos small responsive ---*/
+  
+  @media (max-width: 576px) {
+    .wrap-login {
+      padding: 77px 15px 33px 15px;
+    }
+  }
+
+
+  /* Formulario */
+#alumnoForm {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#alumnoForm label {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#alumnoForm input[type="text"],
+#alumnoForm input[type="number"] {
+  width: calc(50% - 10px);
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#alumnoForm button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#alumnoForm button:hover {
+  background-color: #0056b3;
+}
+
+#alumnoForm button[type="button"] {
+  background-color: #dc3545;
+  margin-left: auto;
+}
+
+/* Tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #007bff;
+  color: #fff;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #alumnoForm input[type="text"],
+  #alumnoForm input[type="number"] {
+      width: 100%;
+      margin-right: 0;
+  }
+}
+
+  /* Estilos para el formulario de registro rápido */
+
+#registroRapido {
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#registroRapido h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#registroRapidoForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#registroRapidoForm label {
+  margin-bottom: 5px;
+}
+
+#registroRapidoForm input[type="text"],
+#registroRapidoForm input[type="number"] {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+#registroRapidoForm button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#registroRapidoForm button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Estilos para la tabla de puntuaciones */
+.table {
+  width: 80%;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.table h1 {
+  background-color: #4CB8B3;
+  color: white;
+  padding: 20px;
+  margin: 0;
+  font-size: 24px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.table table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table th, .table td {
+  padding: 15px;
+  text-align: center;
+}
+
+.table th {
+  background-color: #333;
+  color: white;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table tbody tr:hover {
+  background-color: #ddd;
+}
+
+/* Estilo para el texto dentro de las celdas */
+.table td {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Estilo para la tabla responsiva en dispositivos móviles */
+@media screen and (max-width: 600px) {
+  .table {
+      width: 100%;
+      margin: 10px auto;
+      border-radius: 0;
+  }
+  
+  .table h1 {
+      font-size: 20px;
+      padding: 15px;
+  }
+
+  .table th, .table td {
+      padding: 10px;
+  }
+}
+
+
+
